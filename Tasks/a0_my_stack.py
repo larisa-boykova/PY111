@@ -1,9 +1,9 @@
 """
 My little Stack
 """
-from typing import Any
+from typing import Any, List
 
-
+_stack: List = []
 def push(elem: Any) -> None:
 	"""
 	Operation that add element to stack
@@ -11,17 +11,16 @@ def push(elem: Any) -> None:
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
-	print(elem)
+	_stack.append(elem)
 	return None
 
 
 def pop() -> Any:
 	"""
 	Pop element from the top of the stack. If not elements - should return None.
-
 	:return: popped element
 	"""
-	return None
+	return _stack.pop()
 
 
 def peek(ind: int = 0) -> Any:
