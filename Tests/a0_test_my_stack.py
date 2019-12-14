@@ -42,6 +42,8 @@ class MyTestCase(unittest.TestCase):
 		
 		self.assertIsNone(my_stack.peek(100), msg="Should return None if no elements")
 
+	def test_empty_peek(self):
+		self.assertIsNone(my_stack.peek())
 
 if __name__ == '__main__':
 	unittest.main()
