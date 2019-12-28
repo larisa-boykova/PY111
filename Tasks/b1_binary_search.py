@@ -25,5 +25,3 @@ def binary_search(elem: Any, arr: Sequence) -> Optional[int]:
 		if elem > arr[mid_ind]:
 			ind_start = mid_ind + 1
 
-
-binary_search (12,[0,3,5,9,11,24,42])
