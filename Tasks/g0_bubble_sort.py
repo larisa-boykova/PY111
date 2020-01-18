@@ -10,4 +10,11 @@ def sort(container: Collection[_Tt]) -> Collection[_Tt]:
 	:param container: container of elements to be sorted
 	:return: container sorted in ascending order
 	"""
+	container = list(container)
+	for i in range(len(container)):
+		for i in range(len(container)-1):
+			if container[i]>container[i+1]:
+				container[i],container[i + 1]=container[i+1],container[i]
+
+
 	return container
