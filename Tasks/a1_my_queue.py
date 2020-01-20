@@ -1,8 +1,9 @@
 """
 My little Queue
 """
-from typing import Any
+from typing import Any, List
 
+_queue: List = []
 
 def enqueue(elem: Any) -> None:
 	"""
@@ -11,7 +12,7 @@ def enqueue(elem: Any) -> None:
 	:param elem: element to be added
 	:return: Nothing
 	"""
-	print(elem)
+	_queue.append(elem)
 	return None
 
 
@@ -21,7 +22,8 @@ def dequeue() -> Any:
 
 	:return: dequeued element
 	"""
-	return None
+	if _queue:
+		return _queue.pop(0)
 
 
 def peek(ind: int = 0) -> Any:
@@ -32,7 +34,8 @@ def peek(ind: int = 0) -> Any:
 	:return: peeked element
 	"""
 	print(ind)
-	return None
+	if ind < len(_queue):
+		return _queue[ind]
 
 
 def clear() -> None:
@@ -41,4 +44,4 @@ def clear() -> None:
 
 	:return: None
 	"""
-	return None
+	return _queue.clear()
